@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		034652BD1967225300D11C9F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 034652BC1967225300D11C9F /* main.cpp */; };
-		034652BF1967225300D11C9F /* numerical_integration.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 034652BE1967225300D11C9F /* numerical_integration.1 */; };
+		03E767AE196A2B1800C5DDB3 /* integration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03E767AD196A2B1800C5DDB3 /* integration.cpp */; };
+		03E767B1196A2B2300C5DDB3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03E767B0196A2B2300C5DDB3 /* main.cpp */; };
+		03E767B4196A2BB900C5DDB3 /* unit_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03E767B3196A2BB900C5DDB3 /* unit_test.cpp */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03E767A4196A1FE800C5DDB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 034652B11967225300D11C9F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 034652B81967225300D11C9F;
+			remoteInfo = "numerical integration";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		034652B71967225300D11C9F /* CopyFiles */ = {
@@ -18,7 +29,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				034652BF1967225300D11C9F /* numerical_integration.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -26,12 +36,22 @@
 
 /* Begin PBXFileReference section */
 		034652B91967225300D11C9F /* numerical integration */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "numerical integration"; sourceTree = BUILT_PRODUCTS_DIR; };
-		034652BC1967225300D11C9F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		034652BE1967225300D11C9F /* numerical_integration.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = numerical_integration.1; sourceTree = "<group>"; };
+		03E76797196A1FE800C5DDB3 /* numerical integration Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "numerical integration Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03E767AD196A2B1800C5DDB3 /* integration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = integration.cpp; sourceTree = "<group>"; };
+		03E767AF196A2B1E00C5DDB3 /* integration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = integration.h; sourceTree = "<group>"; };
+		03E767B0196A2B2300C5DDB3 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		03E767B3196A2BB900C5DDB3 /* unit_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unit_test.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		034652B61967225300D11C9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03E76794196A1FE800C5DDB3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,7 +64,10 @@
 		034652B01967225300D11C9F = {
 			isa = PBXGroup;
 			children = (
-				034652BB1967225300D11C9F /* numerical integration */,
+				03E767B2196A2B3700C5DDB3 /* New Group */,
+				03E767B0196A2B2300C5DDB3 /* main.cpp */,
+				03E767AF196A2B1E00C5DDB3 /* integration.h */,
+				03E767AD196A2B1800C5DDB3 /* integration.cpp */,
 				034652BA1967225300D11C9F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,17 +76,17 @@
 			isa = PBXGroup;
 			children = (
 				034652B91967225300D11C9F /* numerical integration */,
+				03E76797196A1FE800C5DDB3 /* numerical integration Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		034652BB1967225300D11C9F /* numerical integration */ = {
+		03E767B2196A2B3700C5DDB3 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				034652BC1967225300D11C9F /* main.cpp */,
-				034652BE1967225300D11C9F /* numerical_integration.1 */,
+				03E767B3196A2BB900C5DDB3 /* unit_test.cpp */,
 			);
-			path = "numerical integration";
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +109,24 @@
 			productReference = 034652B91967225300D11C9F /* numerical integration */;
 			productType = "com.apple.product-type.tool";
 		};
+		03E76796196A1FE800C5DDB3 /* numerical integration Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03E767A6196A1FE800C5DDB3 /* Build configuration list for PBXNativeTarget "numerical integration Tests" */;
+			buildPhases = (
+				03E76793196A1FE800C5DDB3 /* Sources */,
+				03E76794196A1FE800C5DDB3 /* Frameworks */,
+				03E76795196A1FE800C5DDB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03E767A5196A1FE800C5DDB3 /* PBXTargetDependency */,
+			);
+			name = "numerical integration Tests";
+			productName = "numerical integration Tests";
+			productReference = 03E76797196A1FE800C5DDB3 /* numerical integration Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -94,6 +135,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "___FULLUSERNAME___";
+				TargetAttributes = {
+					03E76796196A1FE800C5DDB3 = {
+						TestTargetID = 034652B81967225300D11C9F;
+					};
+				};
 			};
 			buildConfigurationList = 034652B41967225300D11C9F /* Build configuration list for PBXProject "numerical integration" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -108,20 +154,48 @@
 			projectRoot = "";
 			targets = (
 				034652B81967225300D11C9F /* numerical integration */,
+				03E76796196A1FE800C5DDB3 /* numerical integration Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03E76795196A1FE800C5DDB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		034652B51967225300D11C9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				034652BD1967225300D11C9F /* main.cpp in Sources */,
+				03E767B1196A2B2300C5DDB3 /* main.cpp in Sources */,
+				03E767AE196A2B1800C5DDB3 /* integration.cpp in Sources */,
+				03E767B4196A2BB900C5DDB3 /* unit_test.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03E76793196A1FE800C5DDB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03E767A5196A1FE800C5DDB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 034652B81967225300D11C9F /* numerical integration */;
+			targetProxy = 03E767A4196A1FE800C5DDB3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		034652C01967225300D11C9F /* Debug */ = {
@@ -197,6 +271,11 @@
 		034652C31967225300D11C9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/Cellar/boost/1.55.0_2/include,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -204,7 +283,58 @@
 		034652C41967225300D11C9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/Cellar/boost/1.55.0_2/include,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		03E767A7196A1FE800C5DDB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "numerical integration Tests/numerical integration Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/Cellar/boost/1.55.0_2/include,
+				);
+				INFOPLIST_FILE = "numerical integration Tests/numerical integration Tests-Info.plist";
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/boost/1.55.0_2/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		03E767A8196A1FE800C5DDB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "numerical integration Tests/numerical integration Tests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/Cellar/boost/1.55.0_2/include,
+				);
+				INFOPLIST_FILE = "numerical integration Tests/numerical integration Tests-Info.plist";
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/boost/1.55.0_2/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -227,6 +357,16 @@
 				034652C41967225300D11C9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03E767A6196A1FE800C5DDB3 /* Build configuration list for PBXNativeTarget "numerical integration Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03E767A7196A1FE800C5DDB3 /* Debug */,
+				03E767A8196A1FE800C5DDB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
