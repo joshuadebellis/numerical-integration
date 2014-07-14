@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		03E767AE196A2B1800C5DDB3 /* integration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03E767AD196A2B1800C5DDB3 /* integration.cpp */; };
 		03E767B1196A2B2300C5DDB3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03E767B0196A2B2300C5DDB3 /* main.cpp */; };
-		03E767B4196A2BB900C5DDB3 /* unit_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03E767B3196A2BB900C5DDB3 /* unit_test.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +39,6 @@
 		03E767AD196A2B1800C5DDB3 /* integration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = integration.cpp; sourceTree = "<group>"; };
 		03E767AF196A2B1E00C5DDB3 /* integration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = integration.h; sourceTree = "<group>"; };
 		03E767B0196A2B2300C5DDB3 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		03E767B3196A2BB900C5DDB3 /* unit_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unit_test.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +82,6 @@
 		03E767B2196A2B3700C5DDB3 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				03E767B3196A2BB900C5DDB3 /* unit_test.cpp */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -176,7 +173,6 @@
 			files = (
 				03E767B1196A2B2300C5DDB3 /* main.cpp in Sources */,
 				03E767AE196A2B1800C5DDB3 /* integration.cpp in Sources */,
-				03E767B4196A2BB900C5DDB3 /* unit_test.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +308,12 @@
 				);
 				INFOPLIST_FILE = "numerical integration Tests/numerical integration Tests-Info.plist";
 				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/boost/1.55.0_2/lib;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-stdlib=libstdc++",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -333,6 +335,12 @@
 				);
 				INFOPLIST_FILE = "numerical integration Tests/numerical integration Tests-Info.plist";
 				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/boost/1.55.0_2/lib;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-stdlib=libstdc++",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
